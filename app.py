@@ -48,7 +48,9 @@ def home():
 
     one_day = time.time() - 600
     base = Path('/home/virtual/vps-5f29e5/0/0fda52cbb6/public_html/poster/static/posters')
-
+    
+    # Remove all generated posters older than one day from the directory
+    
     for somefile in base.walkfiles():
         if somefile.mtime < one_day:
             somefile.remove()

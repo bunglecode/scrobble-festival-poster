@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Festival Poster Generator</title>
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="180x180" href="{{ url_for('static', filename='/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" type="image/x-icon" sizes="32x32" href="{{ url_for('static', filename='/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" type="image/x-icon" sizes="16x16" href="{{ url_for('static', filename='/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/hover.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/image_form.css') }}" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <form action="/poster" method = "POST" id="poster-form">
+    <h1 style="color: #011a32;">Generate Your Poster</h1>
+    <div class="form-group">
+      <input placeholder="Username" type="text" name="field1" required="required"/>
+      <label class="control-label">Enter your last.fm username:</label><i class="bar"></i>
+    </div>
+    <div class="form-radio">
+        <h4>Choose a timeframe:</h4>
+      <div class="radio">
+        <label>
+          <input type="radio" name="tf" required="required" value="7day"/><i class="helper"></i>1 Week
+        </label>
+      </div>
+        <div class="radio">
+        <label>
+          <input type="radio" name="tf" required="required" value="1month"/><i class="helper"></i>1 Month
+        </label>
+      </div>
+        <div class="radio">
+        <label>
+          <input type="radio" name="tf" required="required" value="3month"/><i class="helper"></i>3 Months
+        </label>
+      </div>
+        <div class="radio">
+        <label>
+          <input type="radio" name="tf" required="required" value="6month"/><i class="helper"></i>6 Months
+        </label>
+      </div>
+        <div class="radio">
+        <label>
+          <input type="radio" name="tf" required="required" value="12month"/><i class="helper"></i>1 Year
+        </label>
+      </div>
+        <div class="radio">
+        <label>
+          <input type="radio" name="tf" required="required" value="overall"/><i class="helper"></i>All Time
+        </label>
+      </div>
+    </div>
+    <div class="form-radio">
+        <h4>Choose a template:</h4>
+        <div class="radio row">
+            <label class="column">
+                <input type="radio" name="template" required="required" value="SF-1"/><i class="helper"></i><img class="column" src="static/base/SF-1.png">
+            </label>
+            <label class="column">
+                <input type="radio" name="template" required="required" value="SF-2"/><i class="helper"></i><img class="column" src="static/base/SF-2.png">
+            </label>
+            <label class="column">
+                <input type="radio" name="template" required="required" value="SF-3"/><i class="helper"></i><img class="column" src="static/base/SF-3.png">
+            </label>
+            <label class="column">
+                <input type="radio" name="template" required="required" value="SF-4"/><i class="helper"></i><img class="column" src="static/base/SF-4.png">
+            </label>
+            <label class="column">
+                <input type="radio" name="template" required="required" value="SF-5"/><i class="helper"></i><img class="column" src="static/base/SF-5.png">
+            </label>
+            <label class="column">
+                <input type="radio" name="template" required="required" value="SF-6"/><i class="helper"></i><img class="column" src="static/base/SF-6.png">
+            </label>
+            <label class="column">
+                <input type="radio" name="template" required="required" value="SF-7"/><i class="helper"></i><img class="column" src="static/base/SF-7.png">
+            </label>
+            <label class="column">
+                <input type="radio" name="template" required="required" value="SF-8"/><i class="helper"></i><img class="column" src="static/base/SF-8.png">
+            </label>
+        </div>
+    </div>
+  </form>
+</div>
+           <div align="center" style="margin-bottom: 5em;"><button align="center" style="border: 2px solid #011a32; background-color: #ecf0f3; height:75px; width:150px" class="hvr-sweep-to-right" form="poster-form" type = "submit" value = "Submit">Submit</button></div>
+</body>
+</html>

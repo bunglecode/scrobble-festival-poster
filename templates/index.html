@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Festival Poster Generator</title>
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="180x180" href="{{ url_for('static', filename='/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" type="image/x-icon" sizes="32x32" href="{{ url_for('static', filename='/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" type="image/x-icon" sizes="16x16" href="{{ url_for('static', filename='/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hover.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+<body style="background-color: #ecf0f3;">
+<div id="wrapper">
+    <div id="container">
+        <h1 style="margin-bottom: 1em;">Scrobble Festival Poster Generator</h1>
+        <h3 style="margin-bottom: 3.5em;">Generate a festival poster with your top Last.fm or Spotify artists!</h3>
+        <p align="center"><a href="/form" ><button class="hvr-sweep-to-right" style="border: 2px solid #011a32; background-color: #ecf0f3; height:75px; width:150px">Last.fm</button></a></p>
+        <p align="center"><a href="/spotify" ><button class="hvr-sweep-to-right" style="border: 2px solid #011a32; background-color: #ecf0f3; height:75px; width:150px">Spotify</button></a></p>
+    </div>
+</div>
+<script type="text/javascript" src="https://cookieconsent.popupsmart.com/src/js/popper.js"></script><script> window.start.init({Palette:"palette4",Mode:"floating right",Theme:"classic",Message:"This website uses cookies to handle your Spotify data.",ButtonText:"Got it!",Time:"1",})</script>
+</body>
+</html>

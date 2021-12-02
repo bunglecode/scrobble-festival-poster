@@ -2,3 +2,15 @@
  Generates a festival line-up style poster based on Spotify/Last.fm top artists in a specified time period
 
 app.py contains main Python code
+
+Packages utilised:
+- Flask
+- Pillow
+- pylast
+- json
+- requests
+- os
+- datetime
+- string
+- path
+- urllib

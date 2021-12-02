@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Festival Poster Generator</title>
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="180x180" href="{{ url_for('static', filename='/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" type="image/x-icon" sizes="32x32" href="{{ url_for('static', filename='/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" type="image/x-icon" sizes="16x16" href="{{ url_for('static', filename='/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hover.css') }}">
+</head>
+<body style="background-color: #ecf0f3;">
+<div id="wrapper">
+    <div id="container">
+        <h1 style="margin-bottom: 2em;">Scrobble Festival Poster Generator</h1>
+        <h4 style="color: red;" align="center">You do not have enough top artists for this timeframe. Please try using a larger timeframe.</h4>
+        <p align="center"><a href="/form" ><button class="hvr-sweep-to-right" style="border: 2px solid #011a32; background-color: #ecf0f3; height:75px; width:150px">Last.fm</button></a></p>
+        <p align="center"><a href="/spot_form" ><button class="hvr-sweep-to-right" style="border: 2px solid #011a32; background-color: #ecf0f3; height:75px; width:150px">Spotify</button></a></p>
+    </div>
+</div>
+</body>
+</html>

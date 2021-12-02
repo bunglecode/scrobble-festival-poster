@@ -465,7 +465,7 @@ def spotposter():
         except (ValueError, FileNotFoundError) as e:
             img.paste(1, (1150, 1815, 1400, 2065))
 
-        # Delete temp image files
+        # Delete temporary artist image files after imposed onto main poster
         try:
             os.remove("static/artist_temp/temp1.png")
             os.remove("static/artist_temp/temp11.png")

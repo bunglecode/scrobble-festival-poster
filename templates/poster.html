@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Festival Poster Generator</title>
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="180x180" href="{{ url_for('static', filename='/favicon/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" type="image/x-icon" sizes="32x32" href="{{ url_for('static', filename='/favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" type="image/x-icon" sizes="16x16" href="{{ url_for('static', filename='/favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/poster.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hover.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bg.css') }}">
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+
+</head><body style="background-color: #ecf0f3;">
+
+<div id="poster-final" align="middle">
+    <img src="{{ imageFile }}" id="center-fit" />
+    <form method="GET" action="{{ imageFile }}">
+        <button type="submit" name="download" value="downloaded" class="hvr-sweep-to-right" style="margin-top: 1.2em; margin-bottom: 2.5em; border: 2px solid #011a32; background-color: #ecf0f3; height:75px; width:150px">Download</button>
+    </form>
+    <p>(Posters will be deleted from the server after 10 minutes, so make sure you download it or come back later!)</p>
+</div>
+<div align="center">
+    <h2 style="margin-top: 2em; margin-bottom: 2em;">Your playlist on the way to the festival (top tracks):</h2>
+    {% for track in topTracks_list %}
+        <h3 style="padding: 5px;">{{ loop.index }}) {{ track }}</h3>
+    {% endfor %}
+    {% for uri in uri_list %}
+    <ol style="padding: 5px;"><iframe src="https://open.spotify.com/embed/track/{{uri}}"
+                width="700" height="100" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></ol>
+    {% endfor %}
+</div>
+
+ <div align="center">
+ <a href="/" ><button class="hvr-sweep-to-right" style="margin-top: 4.5em; margin-bottom: 2.5em; border: 2px solid #011a32; background-color: #ecf0f3; height:75px; width:150px">Home</button></a>
+</div>
+</body>
+</html>
